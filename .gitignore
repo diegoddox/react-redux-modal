@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+0.*
+1.*
+lib
+fonts/
+dist
+typings/
+tsconfig.json
