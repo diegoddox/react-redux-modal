@@ -1,7 +1,7 @@
 'use strict';
 
 import uiid from 'uuid';
-import {createReducer, checkDuplicatedModal}  from './utils.js';
+import {createReducer}  from './utils.js';
 
 export const ADD_MODAL = '@react-redux-modal.ADD_MODAL';
 export const REMOVE_MODAL = '@react-redux-modal.REMOVE_MODAL';
@@ -16,21 +16,6 @@ const initialSate = {
 
 export default createReducer(initialSate, {
   [ADD_MODAL]: (state, payload) => {
-    const duplicated = checkDuplicatedModal(state.pins, payload);
-    if (duplicated.isDuplicated) {
-      return {
-        ...state,
-        pins: state.pins.filter(item => item.id !== duplicated.modal.id),
-        modals: [
-          ...state,
-          {
-            id: uiid.v1(),
-            ...duplicated.modal
-          }
-        ]
-      };
-    }
-
     return {
       ...state,
       modals: [

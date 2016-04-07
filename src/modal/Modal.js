@@ -42,7 +42,7 @@ export default class Modal extends Component {
                 <button
                   type="button"
                   className="rr-close rrm-icon-cancel"
-                  onClick={this.remove.bind(this)}></button>
+                  onClick={this.remove.bind(this)}>X</button>
               </div>
             </div>
 
