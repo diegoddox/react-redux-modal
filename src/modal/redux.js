@@ -5,13 +5,10 @@ import {createReducer}  from './utils.js';
 
 export const ADD_MODAL = '@react-redux-modal.ADD_MODAL';
 export const REMOVE_MODAL = '@react-redux-modal.REMOVE_MODAL';
-export const ADD_PIN = '@react-redux-modal.ADD_PIN';
-export const REMOVE_PIN = '@react-redux-modal.REMOVE_PIN';
 export const CLEAR_ALL = '@react-redux-modal.CLEAR_ALL';
 
 const initialSate = {
-  modals: [],
-  pins: []
+  modals: []
 };
 
 export default createReducer(initialSate, {
@@ -33,16 +30,9 @@ export default createReducer(initialSate, {
       modals: state.modals.filter(modal => modal.id !== id)
     };
   },
-  [REMOVE_PIN]: (state, id) => {
-    return {
-      ...state,
-      pins: state.pins.filter(item => item.id !== id)
-    };
-  },
   [CLEAR_ALL]: () => {
     return {
-      modals: [],
-      pins: []
+      modals: []
     };
   }
 });

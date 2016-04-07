@@ -10,23 +10,10 @@ export default class Modal extends Component {
     super(props);
   }
 
-  toggle() {
-    if (this.props.showPin) {
-      this.props.addPin(this.props);
-      this.props.removeModal(this.props.id);
-      return;
-    }
-    this.props.removeModal(this.props.id);
-  }
-
   handleOnOutsideClick() {
     if (this.props.options.closeOnOutsideClick || false) {
       this.props.removeModal(this.props.id);
     }
-  }
-
-  remove() {
-    this.props.removeModal(this.props.id);
   }
 
   render() {
@@ -42,7 +29,7 @@ export default class Modal extends Component {
                 <button
                   type="button"
                   className="rr-close rrm-icon-cancel"
-                  onClick={this.remove.bind(this)}>X</button>
+                  onClick={this.props.removeModal.bind(this, this.props.id)}>X</button>
               </div>
             </div>
 
