@@ -65,7 +65,7 @@ class myModalComopnent extends Component {
   }
 
   removeThisModal() {
-    this.props.remove();
+    this.props.removeModal();
   }
 	
   render() {

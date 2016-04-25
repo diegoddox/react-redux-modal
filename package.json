@@ -1,6 +1,6 @@
 {
   "name": "react-redux-modal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "react-redux-modal is a React modal implemented with Redux",
   "main": "lib/index.js",
   "jsnext:main": "./src/modal/index.js",
