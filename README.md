@@ -92,7 +92,6 @@ export class YourComponent extends Component {
     modal.add(myModalComopnent, {
       title: 'This is my modal',
       size: 'medium', // large, medium or small,
-      data: {}, // whatever you wanted as it's mentioned above,
       closeOnOutsideClick: false // (optional) Switch to true if you want to close the modal by clicking outside of it
     });
   }
