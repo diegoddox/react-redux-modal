@@ -34,9 +34,7 @@ export default class Modal extends Component {
             </div>
 
             <div className="rrm-body">
-              <this.props.component
-                data={this.props.options.data || null}
-                remove={() => this.props.removeModal(this.props.id)}/>
+              <this.props.component data={this.props.options} remove={() => this.props.removeModal(this.props.id)}/>
             </div>
           </div>
 
