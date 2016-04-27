@@ -25,7 +25,7 @@ class myLargeModalComponent extends Component {
         <p>{loremIpsum({count: 1})}</p>
         <button
           type="button"
-          onClick={() => this.props.remove()}>Remove this modal</button>
+          onClick={() => this.props.removeModal()}>Remove this modal</button>
       </div>
     );
   }
@@ -61,8 +61,9 @@ export default class App extends Component {
 
   addModalLarge() {
     modal.add(myLargeModalComponent, {
-      title: 'Quisque laoreet orci vitae libero semper, rhoncus finibus ipsum consequat. Proin rhoncus nunc nec orci posuere.',
-      size: 'large'
+      title: 'This one there is no close botton.',
+      size: 'large',
+      hideCloseButton: true
     });
   }
 
@@ -114,7 +115,7 @@ export default class App extends Component {
               className="btn btn-primary"
               onClick={this.addOutsideClickCloseModal.bind(this)}>add "click outside to close" modal</button>
           </div>
-          <ReduxModal showPin={true}/>
+          <ReduxModal />
           {this.renderDev()}
         </div>
       </Provider>

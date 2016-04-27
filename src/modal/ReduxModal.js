@@ -6,13 +6,7 @@ import * as actions from './redux';
 import Modal from './Modal';
 
 @connect(state => ({modals: state.modals.modals}), actions)
-export default class ReduxModal extends Component {
-  static displayName = 'ReduxModal';
-
-  static propTypes = {
-    modals: PropTypes.array
-  };
-
+class ReduxModal extends Component {
   constructor(props) {
     super(props);
   }
@@ -30,12 +24,11 @@ export default class ReduxModal extends Component {
   render() {
     return (
       <div className="react-redux-modal">
-
         <div className="rr-modals">
-          {this.props.modals.map((modal, index) => {
+          {this.props.modals.map((modal, i) => {
             return (
               <Modal
-                index={index}
+                index={i}
                 key={modal.id}
                 removeModal={this.props.removeModal}
                 {...modal}/>
@@ -46,3 +39,11 @@ export default class ReduxModal extends Component {
     );
   }
 }
+
+ReduxModal.displayName = 'ReduxModal';
+
+ReduxModal.propTypes = {
+  modals: PropTypes.array
+};
+
+export default ReduxModal;
