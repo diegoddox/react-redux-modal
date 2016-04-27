@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(config.path_base + '/dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: ''
   },
   module: {
     preLoaders: [
