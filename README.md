@@ -51,16 +51,6 @@ Create a `component` that will be injected in the modal
 class myModalComopnent extends Component {
   constructor(props) {
     super(props);
-    /*
-     * @props: this.props.remove()
-     * @type: func
-     * @desc: this will remove the current modal
-     * 
-     * @props: this.props.data
-     * @type: is up to you :D
-     * @desc: The data you have pass if you don't
-     * pass anything this will be equal to null
-     */
     console.log('## MODAL DATA AND PROPS:', this.props);
   }
 
