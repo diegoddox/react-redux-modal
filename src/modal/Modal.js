@@ -51,10 +51,13 @@ Modal.displayName = 'rrModal';
 
 Modal.propTypes = {
   id: PropTypes.string,
+  index: PropTypes.number,
   removeModal: PropTypes.func.isRequired,
   options: PropTypes.shape({
     size: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    hideCloseButton: PropTypes.bool,
+    closeOnOutsideClick: PropTypes.bool
   }).isRequired
 };
 
