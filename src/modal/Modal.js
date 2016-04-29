@@ -16,9 +16,7 @@ class Modal extends Component {
 
   render() {
     return (
-      <div className="rrm-holder"
-        style={{zIndex: `999${this.props.index}`}}
-        onClick={this.handleOnOutsideClick.bind(this)}>
+      <div className="rrm-holder" style={{zIndex: `999${this.props.index}`}}>
         <div className="scroll">
 
           <div className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
@@ -41,7 +39,7 @@ class Modal extends Component {
 
         </div>
 
-        <div className="rrm-shadow"></div>
+        <div className="rrm-shadow" onClick={this.handleOnOutsideClick.bind(this)} />
       </div>
     );
   }
