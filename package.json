@@ -1,15 +1,15 @@
 {
   "name": "react-redux-modal",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "react-redux-modal is a React modal implemented with Redux",
   "main": "lib/index.js",
-  "jsnext:main": "./src/modal/index.js",
+  "jsnext:main": "./src/index.js",
   "scripts": {
     "start": "better-npm-run dev-server",
     "build:w": "better-npm-run build:w",
     "build": "better-npm-run build",
-    "less": "node_modules/.bin/lessc src/modal/less/index.less --autoprefix=\"last 2 versions\" lib/css/react-redux-modal.css",
-    "less:m": "node_modules/.bin/lessc src/modal/less/index.less --autoprefix=\"last 2 versions\" --clean-css lib/css/react-redux-modal.min.css",
+    "less": "node_modules/.bin/lessc src/less/index.less --autoprefix=\"last 2 versions\" lib/css/react-redux-modal.css",
+    "less:m": "node_modules/.bin/lessc src/less/index.less --autoprefix=\"last 2 versions\" --clean-css lib/css/react-redux-modal.min.css",
     "clean": "better-npm-run clean",
     "lint": "better-npm-run lint",
     "build_app": "concurrent --kill-others & npm run clean & npm run lint & npm run build & npm run less & npm run less:m",
@@ -33,10 +33,10 @@
       }
     },
     "build": {
-      "command": "node_modules/.bin/babel src/modal/ --out-dir lib"
+      "command": "node_modules/.bin/babel src/ --out-dir lib"
     },
     "build:w": {
-      "command": "node_modules/.bin/babel -w src/modal/ --out-dir lib"
+      "command": "node_modules/.bin/babel -w src/ --out-dir lib"
     },
     "lint": {
       "command": "node_modules/.bin/eslint . --ext .js --ext .jsx || true"
@@ -56,6 +56,7 @@
   },
   "files": [
     "lib/",
+    "src/",
     "CHANGELOG.md",
     "README.md"
   ],

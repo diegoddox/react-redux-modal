@@ -8,18 +8,28 @@ class Modal extends Component {
     super(props);
   }
 
-  handleOnOutsideClick() {
-    if (this.props.options.closeOnOutsideClick || false) {
+  handleOnOutsideClick(e) {
+    if (this.props.options.closeOnOutsideClick && !this.isChildOf(e.target, this.refs.modalContent) || false) {
       this.props.removeModal(this.props.id);
+    }
+  }
+
+  isChildOf(child, parent) {
+    if (child.parentNode === parent) {
+      return true;
+    } else if (child.parentNode === null) {
+      return false;
+    } else {
+      return this.isChildOf(child.parentNode, parent);
     }
   }
 
   render() {
     return (
       <div className="rrm-holder" style={{zIndex: `999${this.props.index}`}}>
-        <div className="scroll">
+        <div className="scroll" onClick={this.handleOnOutsideClick.bind(this)}>
 
-          <div className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
+          <div ref="modalContent" className={classnames('rrm-content', `m-${this.props.options.size}` || 'm-medium')}>
             <div className="rrm-title">
               <h2>{this.props.options.title}</h2>
               <div className="rr-title-actions">
@@ -39,7 +49,7 @@ class Modal extends Component {
 
         </div>
 
-        <div className="rrm-shadow" onClick={this.handleOnOutsideClick.bind(this)} />
+        <div className="rrm-shadow" />
       </div>
     );
   }
