@@ -1,10 +1,10 @@
 'use strict';
 
 import './index.less';
-import './modal/less/index.less';
+import './../src/less/index.less';
 import React, {Component, PropTypes} from 'react';
 import {Provider} from 'react-redux';
-import ReduxModal, {modal} from './modal/';
+import ReduxModal, {modal} from './../src/';
 import DevTools from './containers/DevTools';
 import largeText from './largetext';
 import config from './../config';
