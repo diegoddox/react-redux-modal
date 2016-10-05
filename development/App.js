@@ -31,6 +31,21 @@ class myLargeModalComponent extends Component {
   }
 }
 
+class modalComponentWithButton extends Component {
+  static displayName = 'MySUperModal';
+
+  render() {
+    return (
+        <div>
+          <p>{loremIpsum({count: 1})}</p>
+          <button
+              type="button"
+              onClick={() => this.props.removeModal()}>Remove this modal</button>
+        </div>
+    );
+  }
+}
+
 class modalComponent extends Component {
   static displayName = 'MySUperModal';
 
@@ -88,6 +103,13 @@ export default class App extends Component {
       closeOnOutsideClick: true
     });
   }
+  addModalWithoutTitle() {
+    modal.add(modalComponentWithButton, {
+      title: null,
+      hideTitleBar: true,
+      size: 'small'
+    });
+  }
 
   renderDev() {
     if (config.env !== 'production') {
@@ -110,7 +132,9 @@ export default class App extends Component {
             <button
               className="btn btn-primary"
               onClick={this.addModalSmall.bind(this)}>add small modal</button>
-
+            <button
+                className="btn btn-primary"
+                onClick={this.addModalWithoutTitle.bind(this)}>add modal without a title</button>
             <button
               className="btn btn-primary"
               onClick={this.addOutsideClickCloseModal.bind(this)}>add "click outside to close" modal</button>
