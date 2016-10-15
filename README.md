@@ -8,7 +8,7 @@
 
 ##### 2. Add the `react-redux-modal` css link to your app
 ```
-<link href="http://diegoddox.github.io/react-redux-modal/0.1.0/react-redux-modal.min.css" rel="stylesheet" type="text/css">
+<link href="http://diegoddox.github.io/react-redux-modal/0.5/react-redux-modal.min.css" rel="stylesheet" type="text/css">
 ```
 ##### 3. The third thing you need to do is to add the `react-redux-modal` `reducer` to Redux.
 
