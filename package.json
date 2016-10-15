@@ -1,13 +1,13 @@
 {
   "name": "react-redux-modal",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "description": "react-redux-modal is a React modal implemented with Redux",
   "main": "lib/index.js",
   "jsnext:main": "./src/index.js",
   "scripts": {
     "start": "better-npm-run dev-server",
     "build:w": "better-npm-run build:w",
-    "build": "better-npm-run build",
+    "build": "better-npm-run build && npm run less && npm run less:m",
     "less": "node_modules/.bin/lessc src/less/index.less --autoprefix=\"last 2 versions\" lib/css/react-redux-modal.css",
     "less:m": "node_modules/.bin/lessc src/less/index.less --autoprefix=\"last 2 versions\" --clean-css lib/css/react-redux-modal.min.css",
     "clean": "better-npm-run clean",
