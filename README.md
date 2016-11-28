@@ -1,3 +1,5 @@
+# NOT MAINTAINED
+
 ##`react-redux-modal` [demo](http://diegoddox.github.io/react-redux-modal/)
 
 ## Implementation Guide
