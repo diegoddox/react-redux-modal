@@ -6,6 +6,17 @@ import classnames from 'classnames';
 class Modal extends Component {
   constructor(props) {
     super(props);
+
+    window.addEventListener('keydown', this.handleKeydown.bind(this), false);
+  }
+
+  handleKeydown(e) {
+    if (e.keyCode == 27 &&
+      this.props.options.closeOnEscapeClick &&
+      !this.isChildOf(e.target, this.refs.modalContent) || false
+    ) {
+      this.props.removeModal(this.props.id);
+    }
   }
 
   handleOnOutsideClick(e) {
@@ -68,7 +79,8 @@ Modal.propTypes = {
     title: PropTypes.string,
     hideCloseButton: PropTypes.bool,
     hideTitleBar: PropTypes.bool,
-    closeOnOutsideClick: PropTypes.bool
+    closeOnOutsideClick: PropTypes.bool,
+    closeOnEscapeClick: PropTypes.bool
   }).isRequired
 };
 
