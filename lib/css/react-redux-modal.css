@@ -1,0 +1,109 @@
+.react-redux-modal {
+  font-family: "Arial";
+  box-sizing: content-box;
+}
+.react-redux-modal button:focus {
+  outline: 0;
+}
+.react-redux-modal .rrm-holder {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.react-redux-modal .rrm-holder .scroll {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  z-index: 1;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content {
+  z-index: 1;
+  background-color: #fcfcfc;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px #333;
+  margin: 80px auto;
+  overflow: hidden;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-small {
+  width: 300px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-small .rrm-title h2 {
+  width: 140px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-medium {
+  width: 500px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-medium .rrm-title h2 {
+  width: 340px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-large {
+  width: 800px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content.m-large .rrm-title h2 {
+  width: 640px;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #dbdbdb;
+  position: relative;
+  color: #444;
+  box-sizing: content-box;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title h2 {
+  height: 60px;
+  padding: 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4em;
+  margin: 0;
+  line-height: 60px;
+  float: left;
+  box-sizing: content-box;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions {
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions button {
+  width: 40px;
+  height: 40px;
+  margin: 10px 8px;
+  line-height: 40px;
+  position: relative;
+  border: 1px solid transparent;
+  float: right;
+  background-color: transparent;
+  text-align: center;
+  padding: 0;
+  color: #666;
+  font-size: 1.2em;
+  border-radius: 50%;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions button:hover {
+  color: #4186bf;
+  cursor: pointer;
+  background-color: rgba(65, 134, 191, 0.1);
+  border-color: rgba(65, 134, 191, 0.2);
+  box-shadow: 2px 2px 3px #f0f0f0;
+}
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-body {
+  width: 100%;
+  padding: 20px;
+}
+.react-redux-modal .rrm-holder .rrm-shadow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 58, 68, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
